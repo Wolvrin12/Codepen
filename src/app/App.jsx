@@ -7,11 +7,11 @@ const App = () => {
   const [html, setHtml] = useLocalStorage("html", "");
   const [css, setCss] = useLocalStorage("css", "");
   const [js, setJs] = useLocalStorage("js", "");
-  const [srcDoc, setSrcDoc] = useState("");
+  const [code, setCode] = useState("");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setSrcDoc(`
+      setCode(`
         <html>
           <body>${html}</body>
           <style>${css}</style>
@@ -48,7 +48,7 @@ const App = () => {
       </div>
       <div className="app_results pen">
         <iframe
-          srcDoc={srcDoc}
+          srcDoc={code}
           title="output"
           sandbox="allow-scripts"
           frameBorder="0"

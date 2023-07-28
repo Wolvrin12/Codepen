@@ -12,8 +12,8 @@ import "../styles/Editor.css";
 export const Editor = ({ displeyName, language, value, onChange }) => {
   const [open, setOpen] = useState(true);
 
-  const handleChange = (editor, data, value) => {
-    onChange(value);
+  const handleChange = (context) => {
+    onChange(context);
   };
 
   return (
@@ -29,7 +29,7 @@ export const Editor = ({ displeyName, language, value, onChange }) => {
         </button>
       </div>
       <ControlledEditor
-        onBeforeChange={handleChange}
+        onBeforeChange={(editor, data, context) => handleChange(context)}
         value={value}
         className="editor_place"
         options={{
