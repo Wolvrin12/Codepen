@@ -11,49 +11,6 @@
   display: flex;
 }
 
-.editor {
-  flex-grow: 1;
-  flex-basis: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  background-color: #3e3c44;
-}
-
-.editor.close {
-  flex-grow: 0;
-}
-
-.editor.close .CodeMirror-scroll {
-  position: absolute;
-  overflow: hidden !important;
-}
-
-.editor_title {
-  display: flex;
-  justify-content: space-between;
-  background-color: #201f23;
-  color: white;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-
-.editor_place {
-  flex-grow: 1;
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.editor_btn {
-  margin-left: 0.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 .CodeMirror {
   height: 100% !important;
 }

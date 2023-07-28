@@ -1,19 +1,20 @@
-import React, { useState } from "react";
 import { faCompressAlt, faExpandAlt } from "@fortawesome/free-solid-svg-icons";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "codemirror/mode/javascript/javascript";
+import React, { useState } from "react";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/css/css";
+import "../styles/Editor.css";
 
-function Editor({ displeyName, language, value, onChange }) {
+export const Editor = ({ displeyName, language, value, onChange }) => {
   const [open, setOpen] = useState(true);
 
-  function handleChange(editor, data, value) {
+  const handleChange = (editor, data, value) => {
     onChange(value);
-  }
+  };
 
   return (
     <div className={`editor ${open ? "" : "close"}`}>
@@ -41,6 +42,4 @@ function Editor({ displeyName, language, value, onChange }) {
       />
     </div>
   );
-}
-
-export default Editor;
+};

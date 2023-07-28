@@ -1,9 +1,9 @@
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import React, { useEffect, useState } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
-import Editor from "../components/Editor";
+import { Editor } from "../components/Editor";
 import "../styles/App.css";
 
-function App() {
+const App = () => {
   const [html, setHtml] = useLocalStorage("html", "");
   const [css, setCss] = useLocalStorage("css", "");
   const [js, setJs] = useLocalStorage("js", "");
@@ -58,6 +58,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
